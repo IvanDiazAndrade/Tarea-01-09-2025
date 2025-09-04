@@ -16,16 +16,16 @@ for notas_estudiante in lista_notas:
     tiene_nota_bajo_4 = np.any(comparacion)
     #agregar el resultado a la lista de resultados finales
     resultados_finales.append(tiene_nota_bajo_4)
-estudiantes_con_nota_baja = np.array(resultados_finales)
 
 
 #calcular el porcentaje de estudiantes con al menos una nota bajo 4.0
-cantidad_de_estudiantes_reprobados = np.sum(estudiantes_con_nota_baja)
+cantidad_de_estudiantes_reprobados = np.sum(resultados_finales)
 
 #calcular total de estudiantes
 total_estudiantes = len(lista_filtrada)
 
 #calcular porcentaje de estudiantes reprobados
 porcentaje = (cantidad_de_estudiantes_reprobados / total_estudiantes) * 100
+
 
 print(f"Porcentaje de estudiantes con al menos una nota bajo 4.0: {porcentaje.round(1)}%")
